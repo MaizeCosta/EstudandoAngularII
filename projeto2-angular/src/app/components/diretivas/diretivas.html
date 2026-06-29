@@ -1,0 +1,11 @@
+<br>
+<p>Diretiva ngStyle</p>
+
+<p [ngStyle]="estiloParagrafo">Testando</p>
+<button (click)="alterarEstilo()">Alterar</button>
+
+<br>
+<p>Diretiva ngClass</p>
+@for (aluno of alunos; track $index) {
+    <p [ngClass]="aluno">{{aluno}}</p>
+}

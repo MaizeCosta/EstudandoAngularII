@@ -1,0 +1,24 @@
+<p>Controle de Fluxo</p>
+@if(media>= 7){
+    <p>Aluno Aprovado!</p>
+} @else {
+    <p>Aluno Reprovado!</p>
+}
+
+<hr>
+
+<input type="text" name="linguagem" [(ngModel)]="linguagem">
+@switch (linguagem){
+    @case ('HTML') { <p>Linguagem de marcação</p> }
+    @case ('CSS') { <p>Linguagem de estilização</p> }
+    @case ('JS') { <p>Linguagem de programação</p> }
+    @case ('') { <p></p> }
+    @default { <p>Linguagem desconhecida</p> }
+}
+
+<hr>
+
+@for (nome of nomes; track $index) {
+    <p>{{$index}} - {{nome}}</p>
+}
+
