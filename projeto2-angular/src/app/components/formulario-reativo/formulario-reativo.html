@@ -1,0 +1,34 @@
+<form [formGroup]="pessoa">
+    <input type="text" formControlName="nome">
+    <input type="text" formControlName="idade">
+</form>
+ <!--<form [formGroup]="pessoal">
+        <input type="text" formControlName="nome" placeholder="Nome" class="form-control">
+        <input type="number" formControlName="idade" placeholder="Idade" class="form-control">
+        <input type="text" formControlName="cidade" placeholder="Cidade" class="form-control">
+
+        <div>
+            @if (btCadastrar) {
+                <input type="button" [disabled]="pessoal.invalid" value="Cadastrar" class="btn btn-primary">
+            } @else {
+                <input type="button" value="Alterar" class="btn btn-primary">
+                <input type="button" value="Remover" class="btn btn-primary">
+                <input type="button" value="Cancelar" class="btn btn-primary">
+            }
+        </div>
+    </form> -->
+
+<p>{{pessoa.value.nome}}</p>
+<p>{{pessoa.value.idade}}</p>
+
+<br><br>
+
+@if (pessoa.get('nome')?.errors?.['required']) {
+    <p>Deve ser preenchido</p>
+}
+@if (pessoa.get('nome')?.errors?.['minLength']) {
+    <p>Deve ter pelo menos 3 caracteres</p>
+}
+@if (pessoa.get('nome')?.valid) {
+    <p>Nome válido</p>
+}

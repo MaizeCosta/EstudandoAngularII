@@ -1,0 +1,15 @@
+{
+    "usuarios":[
+        {
+            "nome": "maize",
+            "idade":"15",
+            "cidade": "Camaçari"
+        },
+        {
+            "nome": "Alana",
+            "idade":"19",
+            "cidade": "Camaçari"
+        }
+    ] 
+
+}

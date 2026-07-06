@@ -1,0 +1,36 @@
+<section>
+    <h1>Projeto CRUD</h1>
+   
+    <form >
+        <input type="text" placeholder="Nome" class="form-control">
+        <input type="number" placeholder="Idade" class="form-control">
+        <input type="text"  placeholder="Cidade" class="form-control">
+
+        <div>
+           
+                <input type="button" value="Cadastrar" class="btn btn-primary">
+            
+        </div>
+    </form>
+  
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Cidade</th>
+                <th>Selecionar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (usuario of listaUsuario; track $index) {
+                <tr>
+                    <td>{{usuario.nome}}</td>
+                    <td>{{usuario.idade}}</td>
+                    <td>{{usuario.cidade}}</td>
+                </tr>
+                }
+        </tbody>
+    </table>
+</section>
+

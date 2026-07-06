@@ -1,13 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DataBinding } from './components/data-binding/data-binding';
-import { Formulario } from './components/formulario/formulario';
-import { ControleFluxo } from './components/controle-fluxo/controle-fluxo';
-import { Diretivas } from './components/diretivas/diretivas';
+
+import { ProjetoCrud } from './components/projeto-crud/projeto-crud';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DataBinding, Formulario, ControleFluxo, Diretivas],
+  imports: [RouterOutlet, ProjetoCrud],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
