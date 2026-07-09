@@ -1,15 +1,18 @@
 <section>
     <h1>Projeto CRUD</h1>
-   
-    <form >
-        <input type="text" placeholder="Nome" class="form-control">
-        <input type="number" placeholder="Idade" class="form-control">
-        <input type="text"  placeholder="Cidade" class="form-control">
+    <form [formGroup]="pessoa">
+        <input type="text" formControlName="nome" placeholder="Nome" class="form-control">
+        <input type="number" formControlName="idade" placeholder="Idade" class="form-control">
+        <input type="text" formControlName="cidade" placeholder="Cidade" class="form-control">
 
         <div>
-           
-                <input type="button" value="Cadastrar" class="btn btn-primary">
-            
+            @if (btCadastrar) {
+                <input type="button" (click)="cadastar()" [disabled]="pessoa.invalid" value="Cadastrar" class="btn btn-primary">
+            } @else {
+                <input type="button" (click)="alterar()" value="Alterar" class="btn btn-primary">
+                <input type="button" (click)="remover()" value="Remover" class="btn btn-primary">
+                <input type="button" (click)="cancelar()" value="Cancelar" class="btn btn-primary">
+            }
         </div>
     </form>
   
@@ -19,12 +22,11 @@
                 <th>Nome</th>
                 <th>Idade</th>
                 <th>Cidade</th>
-                <th>Selecionar</th>
             </tr>
         </thead>
         <tbody>
-            @for (usuario of listaUsuario; track $index) {
-                <tr>
+            @for (usuario of listaUsuario; track usuario.id) {
+                <tr (click)="selecionar(usuario)">
                     <td>{{usuario.nome}}</td>
                     <td>{{usuario.idade}}</td>
                     <td>{{usuario.cidade}}</td>
@@ -33,4 +35,5 @@
         </tbody>
     </table>
 </section>
+
 

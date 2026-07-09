@@ -21,6 +21,18 @@ section{
         }
     }
     .table{
-        width: 80%;
+        width: 60%;
+
+        tbody{
+            tr{
+            
+                &:hover{
+                    border: 1px solid #3774b1;
+                    cursor: pointer;
+                }
+            
+            }
+        }
+
     }
 }

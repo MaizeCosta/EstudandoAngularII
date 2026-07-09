@@ -1,15 +1,28 @@
 {
-    "usuarios":[
-        {
-            "nome": "maize",
-            "idade":"15",
-            "cidade": "Camaçari"
-        },
-        {
-            "nome": "Alana",
-            "idade":"19",
-            "cidade": "Camaçari"
-        }
-    ] 
-
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "maize",
+      "idade": 15,
+      "cidade": "Camaçari"
+    },
+    {
+      "id": 2,
+      "nome": "Alana",
+      "idade": 19,
+      "cidade": "Camaçari"
+    },
+    {
+      "nome": "Jose",
+      "idade": 12,
+      "cidade": "SP",
+      "id": 3
+    },
+    {
+      "nome": "MMM",
+      "idade": 1,
+      "cidade": "mmm",
+      "id": 4
+    }
+  ]
 }
